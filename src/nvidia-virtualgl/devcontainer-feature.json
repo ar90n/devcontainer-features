@@ -17,7 +17,6 @@
     },
     "containerEnv": {
         "NVIDIA_DRIVER_CAPABILITIES": "all",
-        // "VGL_LOGO": "1"
     },
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
