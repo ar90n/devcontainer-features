@@ -16,7 +16,7 @@
         }
     },
     "containerEnv": {
-        "NVIDIA_DRIVER_CAPABILITIES": "all",
+        "NVIDIA_DRIVER_CAPABILITIES": "all"
     },
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
