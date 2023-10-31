@@ -1,6 +1,6 @@
 {
     "id": "virtualgl",
-    "version": "3.0.1",
+    "version": "1.0.0",
     "name": "VirtualGL",
     "documentationURL": "",
     "description": "Installs VirtualGL.",
