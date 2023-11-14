@@ -1,0 +1,10 @@
+{
+    "install_specified_version": {
+        "image": "debian",
+        "features": {
+            "ros": {
+		    "version": "neotic"
+            }
+        }
+    }
+}

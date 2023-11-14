@@ -1,0 +1,20 @@
+{
+    "id": "ros",
+    "version": "1.0.0",
+    "name": "ROS",
+    "documentationURL": "",
+    "description": "Installs ROS.",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "noetic"
+            ],
+            "default": "noetic",
+            "description": "Select or enter a ROS version to install"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
