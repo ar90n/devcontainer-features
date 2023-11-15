@@ -1,11 +1,11 @@
-#!/usr/bin/env bash
+!/usr/bin/env bash
 
 set -e
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
 
-TARGET_ROS_VERSION="${VERSION:-"noetic"}"
+TARGET_ROS_DISTRO="${DISTRO:-"noetic"}"
 
 if [ "$(id -u)" -ne 0 ]; then
     echo -e 'Script must be run as root. Use sudo, su, or add "USER root" to your Dockerfile before running this script.'
@@ -24,13 +24,13 @@ apt_get_update()
 check_packages() {
     if ! dpkg -s "$@" > /dev/null 2>&1; then
         apt_get_update
-        #apt-get -y install --no-install-recommends "$@"
-        apt-get -y install "$@"
+        DEBIAN_FRONTEND=noninteractive apt-get -y install --no-install-recommends "$@"
+        #DEBIAN_FRONTEND=noninteractive apt-get -y install "$@"
     fi
 }
 
 # Install curl, build-essential other dependencies if missing
-check_packages curl build-essential
+check_packages curl build-essential lsb-release
 
 # Add ROS apt repository
 echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list
@@ -38,7 +38,7 @@ curl -k https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | apt-key
 
 # Install ROS packages
 check_packages \
-	ros-${TARGET_ROS_VERSION}-desktop-full \
+	ros-${TARGET_ROS_DISTRO}-desktop-full \
 	python3-rosinstall \
 	python3-rosinstall-generator \
 	build-essential \
@@ -52,14 +52,12 @@ ls /etc/ros/rosdep/sources.list.d/20-default.list > /dev/null 2>&1 && rm /etc/ro
 rosdep init 
 rosdep update
 
-# Create init script
-cat <<EOF /opt/setup_ros.sh
-source /opt/ros/${TARGET_ROS_VERSION}/setup.bash
+# Add custom profile script
+cat <<EOF > /etc/profile.d/90-setup-ros.sh
+source /opt/ros/${TARGET_ROS_DISTRO}/setup.bash
 source `catkin locate --shell-verbs`
-export ROS_IP="${ROS_IP:-127.0.0.1}"
-export ROS_MASTER_URI="${ROS_MASTER_URI:-http://127.0.0.1:11311}"
 EOF
-RUN chmod +x /opt/setup_ros.sh
+chmod +x /etc/profile.d/90-setup-ros.sh
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
