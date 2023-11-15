@@ -36,7 +36,7 @@ if ! type git > /dev/null 2>&1; then
 fi
 
 # Add xpra apt repository
-echo "deb [arch=amd64] https://xpra.org/ lunar main" > /etc/apt/sources.list.d/xpra.list
+echo "deb [arch=amd64] https://xpra.org/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/xpra.list
 wget -q https://xpra.org/gpg.asc -O- | apt-key add -
 
 # Install Xpra
