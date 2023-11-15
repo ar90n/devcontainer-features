@@ -15,7 +15,7 @@ jobs:
         features:
           - ros
         baseImage:
-          - ubuntu:20.04
+          - ubuntu:focal
     steps:
       - uses: actions/checkout@v3
 
