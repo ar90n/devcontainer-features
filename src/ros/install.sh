@@ -23,9 +23,8 @@ apt_get_update()
 # Checks if packages are installed and installs them if not
 check_packages() {
     if ! dpkg -s "$@" > /dev/null 2>&1; then
-        apt_get_update
+        apt-get update -y
         DEBIAN_FRONTEND=noninteractive apt-get -y install --no-install-recommends "$@"
-        #DEBIAN_FRONTEND=noninteractive apt-get -y install "$@"
     fi
 }
 
