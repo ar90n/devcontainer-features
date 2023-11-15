@@ -1,9 +1,9 @@
 {
     "install_specified_version": {
-        "image": "debian",
+        "image": "ubuntu:focal",
         "features": {
             "ros": {
-		    "version": "neotic"
+		    "distro": "neotic"
             }
         }
     }
