@@ -30,14 +30,14 @@ check_packages() {
 }
 
 # Install wget, gnupg other dependencies if missing
-check_packages wget lsb-release gnupg
+check_packages wget lsb-release gnupg ca-certificates
 if ! type git > /dev/null 2>&1; then
     check_packages git
 fi
 
 # Add xpra apt repository
 echo "deb [arch=amd64] https://xpra.org/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/xpra.list
-wget -q https://xpra.org/gpg.asc -O- | apt-key add -
+wget -q https://xpra.org/xpra.asc -O- | apt-key add -
 
 # Install Xpra
 check_packages xpra x11-xserver-utils x11-apps
@@ -47,7 +47,7 @@ cat << EOF > /usr/local/share/xpra-init.sh
 #! /usr/bin/env bash
 xpra start :\${DISPLAY:-$DEFAULT_DISPLAY} --bind-tcp=0.0.0.0:\${PORT:-$DEFAULT_PORT} --mdns=no --webcam=no --no-daemon --start="xhost +"
 EOF
-RUN chmod +x /usr/local/share/xpra-init.sh
+chmod +x /usr/local/share/xpra-init.sh
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
