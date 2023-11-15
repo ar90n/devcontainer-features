@@ -1,0 +1,14 @@
+{
+    "id": "xpra",
+    "version": "1.0.0",
+    "name": "Xpra",
+    "documentationURL": "",
+    "description": "Installs Xpra.",
+    "entrypoint": "/usr/local/share/xpra-init.sh",
+    "containerEnv": {
+        "DISPLAY": ":1"
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
