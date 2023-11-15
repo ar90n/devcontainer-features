@@ -30,7 +30,7 @@ check_packages() {
 }
 
 # Install wget, gnupg other dependencies if missing
-check_packages wget gnupg
+check_packages wget lsb-release gnupg
 if ! type git > /dev/null 2>&1; then
     check_packages git
 fi
