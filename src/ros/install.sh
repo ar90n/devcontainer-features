@@ -30,7 +30,7 @@ check_packages() {
 }
 
 # Install curl, build-essential other dependencies if missing
-check_packages curl build-essential lsb-release
+check_packages curl build-essential lsb-release gnupg
 
 # Add ROS apt repository
 echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list
