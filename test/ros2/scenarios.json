@@ -1,6 +1,6 @@
 {
     "install_specified_version": {
-        "image": "ubuntu",
+        "image": "ubuntu:focal",
         "features": {
             "ros2": {
 		    "distro": "foxy"
