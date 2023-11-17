@@ -15,10 +15,10 @@ jobs:
         features:
           - nvidia-virtualgl
           - xpra
-          - ros2
         baseImage:
           - debian:latest
           - ubuntu:latest
+          - ubuntu:focal
           - mcr.microsoft.com/devcontainers/base:ubuntu
     steps:
       - uses: actions/checkout@v3
@@ -37,7 +37,6 @@ jobs:
         features:
           - nvidia-virtualgl
           - xpra
-          - ros2
     steps:
       - uses: actions/checkout@v3
 
