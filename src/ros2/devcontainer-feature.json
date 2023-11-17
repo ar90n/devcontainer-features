@@ -1,0 +1,29 @@
+{
+    "id": "ros2",
+    "version": "1.0.0",
+    "name": "ROS2",
+    "documentationURL": "",
+    "description": "Installs ROS2.",
+    "options": {
+        "distro": {
+            "type": "string",
+            "proposals": [
+                "foxy"
+            ],
+            "default": "foxy",
+            "description": "Select or enter a ROS2 distro to install"
+        },
+        "package": {
+            "type": "string",
+            "proposals": [
+                "desktop",
+		"ros-base"
+            ],
+            "default": "desktop",
+            "description": "Select or enter a ROS2 package to install"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

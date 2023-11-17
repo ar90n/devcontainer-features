@@ -1,0 +1,10 @@
+{
+    "install_specified_version": {
+        "image": "ubuntu",
+        "features": {
+            "ros2": {
+		    "distro": "foxy"
+            }
+        }
+    }
+}
