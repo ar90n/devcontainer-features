@@ -1,0 +1,21 @@
+{
+    "id": "kicad",
+    "version": "1.0.0",
+    "name": "KiCad",
+    "documentationURL": "",
+    "description": "Installs KiCad.",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "7.0",
+                "6.0"
+            ],
+            "default": "7.0",
+            "description": "Select or enter a KiCad version to install"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
