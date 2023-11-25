@@ -2,7 +2,7 @@
     "install_specified_version": {
         "image": "ubuntu",
         "features": {
-            "kicad": 
+            "kicad": { 
 		    "version": "7.0"
             }
         }

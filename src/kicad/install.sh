@@ -39,7 +39,10 @@ check_packages_with_recommends() {
 check_packages curl lsb-release gnupg gnupg2 software-properties-common
 
 # Add KiCad apt repository
-add-apt-repository --yes ppa:kicad/kicad-${TARGET_KICAD_VERSION}-releases
+. /etc/os-release
+if [ "${ID}" = "ubuntu" ] ; then
+    add-apt-repository --yes ppa:kicad/kicad-${TARGET_KICAD_VERSION}-releases
+fi
 
 # Install KiCad packages
 #check_packages_with_recommends kicad
