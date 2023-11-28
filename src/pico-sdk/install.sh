@@ -71,7 +71,7 @@ check_packages() {
 # Install dependencies
 GIT_DEPS="git ca-certificates"
 SDK_DEPS="cmake pkg-config gcc-arm-none-eabi gcc g++ libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib"
-PICOPROBE_DEPS="libusb-1.0-0-dev"
+PICOPROBE_DEPS="libusb-1.0-0-dev python3"
 PICOTOOL_DEPS="build-essential libusb-1.0-0-dev"
 OPENOCD_DEPS="gdb-multiarch automake autoconf build-essential texinfo libtool libftdi-dev libusb-1.0-0-dev"
 
@@ -100,7 +100,6 @@ GITHUB_SUFFIX=".git"
 find_version_from_git_tags TARGET_PICO_SDK_VERSION "${GITHUB_PREFIX}pico-sdk${GITHUB_SUFFIX}" "tags/" "." "true"
 
 # Install pico-sdk
-SDK_BRANCH=$TARGET_PICO_SDK_VERSION
 SDK_REPOS="sdk"
 if [[ "$INSTALL_EXAMPLES" == "true" ]]; then
     SDK_REPOS="$SDK_REPOS examples"
@@ -112,10 +111,15 @@ if [[ "$INSTALL_PLAYGROUND" == "true" ]]; then
     SDK_REPOS="$SDK_REPOS playground"
 fi
 
-for REPO in 
+for REPO in $SDK_REPOS
 do
     cd $OUTDIR
     DEST="$OUTDIR/pico-$REPO"
+
+    SDK_BRANCH="master"
+    if [[ "$REPO" == "sdk" ]]; then
+        SDK_BRANCH=$TARGET_PICO_SDK_VERSION
+    fi
 
     if [ -d $DEST ]; then
         echo "$DEST already exists so skipping"
@@ -127,15 +131,17 @@ do
         # Any submodules
         cd $DEST
         git submodule update --init
-        cd $OUTDIR
 
-        # Define PICO_SDK_PATH in ~/.bashrc
-        VARNAME="PICO_${REPO^^}_PATH"
-        echo "Adding $VARNAME to ~/.bashrc"
-        echo "export $VARNAME=$DEST" >> ~/.bashrc
+        # add environment variable configurations
+	VARNAME="PICO_${REPO^^}_PATH"
+        echo "export $VARNAME=$DEST" >> /etc/profile.d/90-setup-pico-sdk.sh
         export ${VARNAME}=$DEST
     fi
 done
+
+if [ -e /etc/profile.d/90-setup-ros2.sh ]; then
+    chmod +x /etc/profile.d/90-setup-ros2.sh
+fi
 
 # Picoprobe and picotool
 TOOL_REPOS=""
@@ -163,7 +169,7 @@ do
 
     if [[ "$REPO" == "picotool" ]]; then
         echo "Installing picotool to /usr/local/bin/picotool"
-        sudo cp picotool /usr/local/bin/
+        cp picotool /usr/local/bin/
     fi
 done
 

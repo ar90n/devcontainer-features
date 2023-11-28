@@ -1,9 +1,15 @@
 {
     "install_specified_version": {
-        "image": "ubuntu",
+        "image": "debian",
         "features": {
             "pico-sdk": {
-		    "version": "1.5.1"
+		  "version": "1.5.1",
+		  "installExamples": true,
+		  "installExtras": true,
+                  "installPlayground": true,
+                  "installPicoprobe": true,
+                  "installPicotool": true,
+                  "installOpenOCD": true
             }
         }
     }
