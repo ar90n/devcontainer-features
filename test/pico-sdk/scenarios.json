@@ -1,0 +1,10 @@
+{
+    "install_specified_version": {
+        "image": "ubuntu",
+        "features": {
+            "pico-sdk": {
+		    "version": "1.5.1"
+            }
+        }
+    }
+}

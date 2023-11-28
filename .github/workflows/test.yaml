@@ -16,6 +16,7 @@ jobs:
           - nvidia-virtualgl
           - xpra
           - kicad
+          - pico-sdk
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -39,6 +40,7 @@ jobs:
           - nvidia-virtualgl
           - xpra
           - kicad
+          - pico-sdk
     steps:
       - uses: actions/checkout@v3
 

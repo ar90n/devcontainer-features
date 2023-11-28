@@ -1,0 +1,51 @@
+{
+    "id": "pico-sdk",
+    "version": "1.0.0",
+    "name": "pico-sdk",
+    "documentationURL": "",
+    "description": "Installs pico-sdk.",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "1.5.1"
+            ],
+            "default": "latest",
+            "description": "Select or enter a pico-sdk version to install"
+        },
+        "installExamples": {
+            "type": "boolean",
+            "default": false,
+            "description": "Additionally install Examples"
+        },
+        "installExtras": {
+            "type": "boolean",
+            "default": false,
+            "description": "Additionally install Extras"
+        },
+        "installPlayground": {
+            "type": "boolean",
+            "default": false,
+            "description": "Additionally install Playground"
+        },
+        "installPicoprobe": {
+            "type": "boolean",
+            "default": false,
+            "description": "Additionally install Picoprobe"
+        },
+        "installPicotool": {
+            "type": "boolean",
+            "default": false,
+            "description": "Additionally install Picotool"
+        },
+        "installOpenOCD": {
+            "type": "boolean",
+            "default": false,
+            "description": "Additionally install OpenOCD"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
