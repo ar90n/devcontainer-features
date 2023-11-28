@@ -68,13 +68,6 @@ check_packages() {
     fi
 }
 
-# Resolve version
-OUTDIR="/opt"
-GITHUB_PREFIX="https://github.com/raspberrypi/"
-GITHUB_SUFFIX=".git"
-
-find_version_from_git_tags TARGET_PICO_SDK_VERSION "${GITHUB_PREFIX}pico-sdk${GITHUB_SUFFIX}" "tags/" "." "true"
-
 # Install dependencies
 GIT_DEPS="git"
 SDK_DEPS="cmake pkg-config gcc-arm-none-eabi gcc g++ libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib"
@@ -98,6 +91,13 @@ check_packages $DEPS
 if ! type git > /dev/null 2>&1; then
     check_packages git
 fi
+
+# Resolve version
+OUTDIR="/opt"
+GITHUB_PREFIX="https://github.com/raspberrypi/"
+GITHUB_SUFFIX=".git"
+
+find_version_from_git_tags TARGET_PICO_SDK_VERSION "${GITHUB_PREFIX}pico-sdk${GITHUB_SUFFIX}" "tags/" "." "true"
 
 # Install pico-sdk
 SDK_BRANCH=$TARGET_PICO_SDK_VERSION
