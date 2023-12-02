@@ -8,3 +8,4 @@
 * [xpra]("https://github.com/ar90n/devcontainer-features/tree/main/src/xpra")
 * [kicad]("https://github.com/ar90n/devcontainer-features/tree/main/src/kicad")
 * [pico-sdk]("https://github.com/ar90n/devcontainer-features/tree/main/src/pico-sdk")
+* [jlink]("https://github.com/ar90n/devcontainer-features/tree/main/src/jlink")

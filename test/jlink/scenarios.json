@@ -1,0 +1,34 @@
+{
+    "install_to_debian": {
+        "image": "debian:latest",
+        "features": {
+            "jlink": {
+		  "acceptTermsOfUse": true
+            }
+        }
+    },
+    "install_to_ubuntu": {
+        "image": "ubuntu:latest",
+        "features": {
+            "jlink": {
+		  "acceptTermsOfUse": true
+            }
+        }
+    },
+    "install_to_ubuntu(focal)": {
+        "image": "ubuntu:focal",
+        "features": {
+            "jlink": {
+		  "acceptTermsOfUse": true
+            }
+        }
+    },
+    "install_to_ubuntu(devcontainer)": {
+        "image": "(mcr.microsoft.com/devcontainers/base:ubuntu)",
+        "features": {
+            "jlink": {
+		  "acceptTermsOfUse": true
+            }
+        }
+    }
+}
