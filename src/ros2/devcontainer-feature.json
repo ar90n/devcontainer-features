@@ -8,11 +8,11 @@
         "distro": {
             "type": "string",
             "proposals": [
-                "foxy",
+                "iron",
                 "humble",
-                "iron"
+                "foxy"
             ],
-            "default": "foxy",
+            "default": "humble",
             "description": "Select or enter a ROS2 distro to install"
         },
         "package": {

@@ -17,11 +17,19 @@ jobs:
           - xpra
           - kicad
           - pico-sdk
+          - ros2
         baseImage:
           - debian:latest
           - ubuntu:latest
           - ubuntu:focal
           - mcr.microsoft.com/devcontainers/base:ubuntu
+        include:
+          - features: ros
+            baseImage: ubuntu:focal
+        exclude: 
+          - features: ros2
+            baseImage: ubuntu:focal
+
     steps:
       - uses: actions/checkout@v3
 
@@ -41,6 +49,8 @@ jobs:
           - xpra
           - kicad
           - pico-sdk
+          - ros
+          - ros2
     steps:
       - uses: actions/checkout@v3
 
