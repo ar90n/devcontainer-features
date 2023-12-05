@@ -8,7 +8,9 @@
         "distro": {
             "type": "string",
             "proposals": [
-                "foxy"
+                "foxy",
+                "humble",
+                "iron"
             ],
             "default": "foxy",
             "description": "Select or enter a ROS2 distro to install"

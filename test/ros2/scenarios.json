@@ -3,7 +3,7 @@
         "image": "ubuntu:focal",
         "features": {
             "ros2": {
-		    "distro": "foxy"
+		    "distro": "humble"
             }
         }
     }
