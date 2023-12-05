@@ -28,6 +28,8 @@ jobs:
             baseImage: ubuntu:focal
         exclude: 
           - features: ros2
+            baseImage: debian:latest
+          - features: ros2
             baseImage: ubuntu:focal
 
     steps:
