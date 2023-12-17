@@ -2,9 +2,6 @@
 
 set -e
 
-env
-exit 1
-
 # Clean up
 rm -rf /var/lib/apt/lists/*
 
