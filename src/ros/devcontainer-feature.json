@@ -1,6 +1,6 @@
 {
     "id": "ros",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "name": "ROS",
     "documentationURL": "",
     "description": "Installs ROS.",
@@ -12,6 +12,16 @@
             ],
             "default": "noetic",
             "description": "Select or enter a ROS distro to install"
+        },
+        "package": {
+            "type": "string",
+            "proposals": [
+                "desktop-full",
+                "desktop",
+		"ros-base"
+            ],
+            "default": "desktop",
+            "description": "Select or enter a ROS package to install"
         }
     },
     "containerEnv": {

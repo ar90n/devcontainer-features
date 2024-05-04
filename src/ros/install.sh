@@ -6,6 +6,7 @@ set -e
 rm -rf /var/lib/apt/lists/*
 
 TARGET_ROS_DISTRO="${DISTRO:-"noetic"}"
+TARGET_ROS_PACKAGE="${PACKAGE:-"desktop"}"
 
 if [ "$(id -u)" -ne 0 ]; then
     echo -e 'Script must be run as root. Use sudo, su, or add "USER root" to your Dockerfile before running this script.'
@@ -37,7 +38,7 @@ curl -k https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | apt-key
 
 # Install ROS packages
 check_packages \
-	ros-${TARGET_ROS_DISTRO}-desktop-full \
+	ros-${TARGET_ROS_DISTRO}-${TARGET_ROS_PACKAGE} \
 	python3-rosinstall \
 	python3-rosinstall-generator \
 	build-essential \
