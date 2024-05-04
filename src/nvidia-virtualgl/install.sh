@@ -64,7 +64,7 @@ check_packages() {
 }
 
 # Install mesa, git, other dependencies if missing
-check_packages curl libegl1-mesa libglu1-mesa  mesa-utils libxv1 libxtst6 x11-common
+check_packages curl 'libegl1-mesa0?' libglu1-mesa  mesa-utils libxv1 libxtst6 x11-common
 if ! type git > /dev/null 2>&1; then
     check_packages git
 fi
