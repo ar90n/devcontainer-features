@@ -8,11 +8,12 @@
         "distro": {
             "type": "string",
             "proposals": [
+                "rolling",
                 "iron",
                 "humble",
                 "foxy"
             ],
-            "default": "humble",
+            "default": "rolling",
             "description": "Select or enter a ROS2 distro to install"
         },
         "package": {
