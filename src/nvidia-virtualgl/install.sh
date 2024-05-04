@@ -84,7 +84,7 @@ esac
 # Install VirtualGL
 umask 0002
 echo "Downloading VirtualGL ${TARGET_VIRTUALGL_VERSION}..."
-curl -fsSL -o /tmp/virtualgl.deb "https://sourceforge.net/projects/virtualgl/files/${TARGET_VIRTUALGL_VERSION}/virtualgl_${TARGET_VIRTUALGL_VERSION}_${architecture}.deb"
+curl -fsSL -o /tmp/virtualgl.deb "https://github.com/VirtualGL/virtualgl/releases/download/${TARGET_VIRTUALGL_VERSION}/virtualgl_${TARGET_VIRTUALGL_VERSION}_${architecture}.deb"
 if [ "$?" != "0" ]; then
     echo "(!) Download failed."
     exit 1
