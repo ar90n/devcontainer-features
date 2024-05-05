@@ -5,7 +5,7 @@ set -e
 # Clean up
 rm -rf /var/lib/apt/lists/*
 
-TARGET_ROS_DISTRO="${DISTRO:-"humble"}"
+TARGET_ROS_DISTRO="${DISTRO:-"rolling"}"
 TARGET_ROS_PACKAGE="${PACKAGE:-"desktop"}"
 
 if [ "$(id -u)" -ne 0 ]; then
