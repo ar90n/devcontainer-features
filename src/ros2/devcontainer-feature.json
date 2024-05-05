@@ -13,7 +13,7 @@
                 "humble",
                 "foxy"
             ],
-            "default": "rolling",
+            "default": "humble",
             "description": "Select or enter a ROS2 distro to install"
         },
         "package": {
