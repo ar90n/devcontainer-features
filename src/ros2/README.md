@@ -15,7 +15,7 @@ Installs ROS2.
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| distro | Select or enter a ROS2 distro to install | string | humble |
+| distro | Select or enter a ROS2 distro to install | string | rolling |
 | package | Select or enter a ROS2 package to install | string | desktop |
 
 

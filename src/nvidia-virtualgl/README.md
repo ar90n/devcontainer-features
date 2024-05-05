@@ -15,7 +15,7 @@ Installs VirtualGL.
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | Select or enter a VirtualGL version to install | string | 3.1 |
+| version | Select or enter a VirtualGL version to install | string | 3.1.1 |
 
 
 

@@ -16,6 +16,7 @@ Installs ROS.
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | distro | Select or enter a ROS distro to install | string | noetic |
+| package | Select or enter a ROS package to install | string | desktop |
 
 
 
