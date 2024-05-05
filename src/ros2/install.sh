@@ -37,11 +37,10 @@ echo "deb http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" > /etc/ap
 curl -k https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | apt-key add -
 
 # Install ROS packages
-install_packages=(ros-${TARGET_ROS_DISTRO}-${TARGET_ROS_PACKAGE} python3-vcstool python3-rosdep python3-argcomplete python3-colcon-common-extensions)
+check_packages ros-${TARGET_ROS_DISTRO}-${TARGET_ROS_PACKAGE} python3-vcstool python3-rosdep python3-argcomplete python3-colcon-common-extensions
 if [ "${TARGET_ROS_DISTRO}" != "rolling" ] ; then
-	install_packages+=("python3-rosinstall")
+  check_packages python3-rosinstall
 fi
-check_packages "${install_packages[@]}"
 
 # Setup ROS environment
 rosdep init
