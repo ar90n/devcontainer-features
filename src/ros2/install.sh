@@ -39,8 +39,6 @@ curl -k https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | apt-key
 # Install ROS packages
 check_packages \
 	ros-${TARGET_ROS_DISTRO}-${TARGET_ROS_PACKAGE} \
-	ros-${TARGET_ROS_DISTRO}-gazebo-ros-pkgs \
-        ros-${TARGET_ROS_DISTRO}-ros-ign-gazebo \
 	python3-vcstool \
 	python3-rosdep \
 	python3-rosinstall \
