@@ -1,6 +1,6 @@
 {
     "install_specified_version": {
-        "image": "ubuntu:22.04",
+        "image": "ubuntu:jammy",
         "features": {
             "kicad": { 
 		    "version": "7.0"
