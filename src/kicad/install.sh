@@ -36,11 +36,11 @@ check_packages_with_recommends() {
 }
 
 # Install curl and other dependencies if missing
-check_packages curl lsb-release gnupg gnupg2 software-properties-common
+check_packages curl lsb-release gnupg gnupg2 software-properties-common bc
 
 # Add KiCad apt repository
 . /etc/os-release
-if [ "${ID}" = "ubuntu" ] ; then
+if [ "${ID}" = "ubuntu" ] && (( $(echo "${VERSION_ID} < 24.04" | bc -l) )) ; then
     add-apt-repository --yes ppa:kicad/kicad-${TARGET_KICAD_VERSION}-releases
 fi
 
