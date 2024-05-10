@@ -43,6 +43,7 @@ if [ "${TARGET_ROS_DISTRO}" != "rolling" ] ; then
 fi
 
 # Setup ROS environment
+ls /etc/ros/rosdep/sources.list.d/20-default.list > /dev/null 2>&1 && rm /etc/ros/rosdep/sources.list.d/20-default.list
 rosdep init
 rosdep update
 
