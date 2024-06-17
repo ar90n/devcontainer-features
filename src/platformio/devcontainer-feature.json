@@ -1,0 +1,21 @@
+{
+    "id": "platformio",
+    "version": "1.0.0",
+    "name": "PlatformIO",
+    "documentationURL": "",
+    "description": "Installs PlatformIO.",
+    "containerEnv": {},
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "platformio.platformio-ide"
+            ],
+            "settings": {
+                "platformio-ide.pioHomeServerHttpPort": 45151
+            }
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

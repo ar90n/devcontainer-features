@@ -1,0 +1,9 @@
+{
+    "install_specified_version": {
+        "image": "ubuntu:jammy",
+        "features": {
+            "platformio": { 
+            }
+        }
+    }
+}
