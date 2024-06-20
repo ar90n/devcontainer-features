@@ -34,10 +34,11 @@ check_packages_with_recommends() {
 }
 
 # Install curl and other dependencies if missing
-check_packages libhidapi-hidraw0 python3-pip python3-venv python-is-python3
+check_packages libhidapi-hidraw0 python3-pip python3-venv python-is-python3 pipx
 
 # Install PlatformIO packages
-pip install platformio
+pipx platformio
+sudo pipx platformio --global
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
