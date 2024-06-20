@@ -1,17 +1,23 @@
 
-# Xpra (xpra)
+# PlatformIO (platformio)
 
-Installs Xpra.
+Installs PlatformIO.
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/ar90n/devcontainer-features/xpra:1": {}
+    "ghcr.io/ar90n/devcontainer-features/platformio:1": {}
 }
 ```
 
 
+
+## Customizations
+
+### VS Code Extensions
+
+- `platformio.platformio-ide`
 
 
 
@@ -24,4 +30,4 @@ This Feature should work on recent versions of Debian/Ubuntu-based distributions
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/ar90n/devcontainer-features/blob/main/src/xpra/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/ar90n/devcontainer-features/blob/main/src/platformio/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
