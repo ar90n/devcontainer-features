@@ -37,8 +37,7 @@ check_packages_with_recommends() {
 check_packages libhidapi-hidraw0 python3-pip python3-venv python-is-python3 pipx
 
 # Install PlatformIO packages
-pipx platformio
-sudo pipx platformio --global
+pipx install platformio
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
