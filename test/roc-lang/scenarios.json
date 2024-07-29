@@ -1,0 +1,11 @@
+{
+    "install_to_debian": {
+        "image": "debian:latest"
+    },
+    "install_to_ubuntu": {
+        "image": "ubuntu:latest"
+    },
+    "install_to_ubuntu(devcontainer)": {
+        "image": "(mcr.microsoft.com/devcontainers/base:ubuntu)"
+    }
+}

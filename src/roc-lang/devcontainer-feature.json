@@ -1,0 +1,13 @@
+{
+    "id": "roc-lang",
+    "version": "1.0.0",
+    "name": "roc-lang",
+    "documentationURL": "",
+    "description": "Installs roc-lang.",
+    "containerEnv": {
+        "PATH": "${PATH}:/usr/lib/roc",
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
