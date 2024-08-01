@@ -36,7 +36,7 @@ fi
 # Fetch roc binary
 architecture="$(uname -m)"
 case $architecture in
-    x86_64) architecture="amd64";;
+    x86_64) architecture="x86_64";;
     aarch64 | armv8*) architecture="arm64";;
     *) echo "(!) Architecture $architecture unsupported"; exit 1 ;;
 esac
