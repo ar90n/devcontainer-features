@@ -1,20 +1,11 @@
 {
-    "install_to_debian": {
-        "image": "debian:latest",
+    "install_specified_version": {
+        "image": "ubuntu:jammy",
         "features": {
-            "roc-lang": {}
-        }
-    },
-    "install_to_ubuntu": {
-        "image": "ubuntu:latest",
-        "features": {
-            "roc-lang": {}
-        }
-    },
-    "install_to_ubuntu(devcontainer)": {
-        "image": "(mcr.microsoft.com/devcontainers/base:ubuntu)",
-        "features": {
-            "roc-lang": {}
+            "roc-lang": {
+            }
         }
     }
 }
+
+

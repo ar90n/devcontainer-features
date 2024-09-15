@@ -1,18 +1,6 @@
 {
     "install_specified_version": {
-        "image": "ubuntu:focal",
-        "features": {
-            "lbstanza": {}
-        }
-    },
-    "install_to_ubuntu": {
-        "image": "ubuntu:latest",
-        "features": {
-            "lbstanza": {}
-        }
-    },
-    "install_to_ubuntu(devcontainer)": {
-        "image": "(mcr.microsoft.com/devcontainers/base:ubuntu)",
+        "image": "ubuntu:jammy",
         "features": {
             "lbstanza": {}
         }
