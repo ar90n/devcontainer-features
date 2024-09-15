@@ -158,8 +158,24 @@ for REPO in $TOOL_REPOS
 do
     cd $OUTDIR
     DEST="$OUTDIR/$REPO"
+
+    SDK_BRANCH="master"
+    if [[ "$REPO" == "picoprobe" ]]; then
+        case $version in
+            1.*)
+                SDK_BRANCH=picoprobe-cmsis-v1.1
+                ;;
+        esac
+    elif [[ "$REPO" == "picotool" ]]; then
+        case $version in
+            1.*)
+                SDK_BRANCH=1.1.2
+                ;;
+        esac
+    fi
+
     REPO_URL="${GITHUB_PREFIX}${REPO}${GITHUB_SUFFIX}"
-    git clone $REPO_URL
+    git clone -b $SDK_BRANCH $REPO_URL
 
     # Build both
     cd $DEST
