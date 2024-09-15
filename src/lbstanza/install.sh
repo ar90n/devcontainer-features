@@ -29,7 +29,7 @@ check_packages() {
 }
 
 # Install dependencies
-DEPS="curl jq udev lsb-release gnupg gnupg2 ca-certificates"
+DEPS="curl jq unzip udev lsb-release gnupg gnupg2 ca-certificates"
 check_packages $DEPS
 if ! type git > /dev/null 2>&1; then
     check_packages git
