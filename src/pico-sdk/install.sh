@@ -128,7 +128,7 @@ do
         echo "$DEST already exists so skipping"
     else
         REPO_URL="${GITHUB_PREFIX}pico-${REPO}${GITHUB_SUFFIX}"
-        echo "Cloning $REPO_URL"
+        echo "Cloning $REPO_URL - $SDK_BRANCH"
         git clone -b $SDK_BRANCH $REPO_URL
 
         # Any submodules
