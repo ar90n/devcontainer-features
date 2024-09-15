@@ -7,7 +7,7 @@
     "options": {
     },
     "containerEnv": {
-        "PATH": "$PATH:/opt/lbstanza/bin"
+        "PATH": "$PATH:/opt/lbstanza"
     },
     "customizations": {
         "vscode": {
