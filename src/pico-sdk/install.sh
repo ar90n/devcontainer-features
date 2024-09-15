@@ -161,13 +161,13 @@ do
 
     SDK_BRANCH="master"
     if [[ "$REPO" == "picoprobe" ]]; then
-        case $version in
+        case $TARGET_PICO_SDK_VERSION in
             1.*)
                 SDK_BRANCH=picoprobe-cmsis-v1.1
                 ;;
         esac
     elif [[ "$REPO" == "picotool" ]]; then
-        case $version in
+        case $TARGET_PICO_SDK_VERSION in
             1.*)
                 SDK_BRANCH=1.1.2
                 ;;
@@ -175,6 +175,7 @@ do
     fi
 
     REPO_URL="${GITHUB_PREFIX}${REPO}${GITHUB_SUFFIX}"
+    echo "Cloning $REPO_URL - $SDK_BRANCH"
     git clone -b $SDK_BRANCH $REPO_URL
 
     # Build both
@@ -195,7 +196,13 @@ done
 if [[ "$INSTALL_OPENOCD" == "true" ]]; then
     cd $OUTDIR
     # Should we include picoprobe support (which is a Pico acting as a debugger for another Pico)
-    OPENOCD_BRANCH="rp2040-v0.12.0"
+    OPENOCD_BRANCH="sdk-2.0"
+    case $TARGET_PICO_SDK_VERSION in
+        1.*)
+            OPENOCD_BRANCH="rp2040-v0.12.0"
+            ;;
+    esac
+
     OPENOCD_CONFIGURE_ARGS="--enable-ftdi --enable-sysfsgpio --enable-bcm2835gpio --enable-picoprobe"
     
     git clone "${GITHUB_PREFIX}openocd${GITHUB_SUFFIX}" -b $OPENOCD_BRANCH --depth=1
