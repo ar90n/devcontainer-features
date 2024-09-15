@@ -18,6 +18,9 @@ jobs:
           - kicad
           - pico-sdk
           - ros2
+          - lbstanza
+          - roc-lang
+          - platformio
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -53,6 +56,9 @@ jobs:
           - pico-sdk
           - ros
           - ros2
+          - lbstanza
+          - roc-lang
+          - platformio
     steps:
       - uses: actions/checkout@v3
 
