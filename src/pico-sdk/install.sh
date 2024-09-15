@@ -119,8 +119,7 @@ do
     SDK_BRANCH="master"
     if [[ "$REPO" == "sdk" ]]; then
         SDK_BRANCH=$TARGET_PICO_SDK_VERSION
-    fi
-    if [[ "$REPO" == "examples" && "$TARGET_PICO_SDK_VERSION" != "latest" ]]; then
+    elif [[ "$TARGET_PICO_SDK_VERSION" != "latest" ]]; then
         SDK_BRANCH=sdk-$TARGET_PICO_SDK_VERSION
     fi
 
