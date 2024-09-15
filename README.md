@@ -11,3 +11,4 @@
 * [jlink]("https://github.com/ar90n/devcontainer-features/tree/main/src/jlink")
 * [platformio]("https://github.com/ar90n/devcontainer-features/tree/main/src/platformio")
 * [roc-lang]("https://github.com/ar90n/devcontainer-features/tree/main/src/roc-lang")
+* [lbstanza]("https://github.com/ar90n/devcontainer-features/tree/main/src/lbstanza")
