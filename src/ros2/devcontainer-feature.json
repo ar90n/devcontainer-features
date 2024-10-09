@@ -14,7 +14,7 @@
                 "humble",
                 "foxy"
             ],
-            "default": "jazzy",
+            "default": "humble",
             "description": "Select or enter a ROS2 distro to install"
         },
         "package": {
