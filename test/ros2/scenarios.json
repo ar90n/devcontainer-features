@@ -1,9 +1,9 @@
 {
     "install_specified_version": {
-        "image": "ubuntu:jammy",
+        "image": "ubuntu:noble",
         "features": {
             "ros2": {
-		    "distro": "humble"
+		    "distro": "jazzy"
             }
         }
     }

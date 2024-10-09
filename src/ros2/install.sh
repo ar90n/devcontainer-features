@@ -30,15 +30,16 @@ check_packages() {
 }
 
 # Install curl, build-essential other dependencies if missing
-check_packages curl build-essential lsb-release gnupg gnupg2
+check_packages curl build-essential lsb-release gnupg gnupg2 software-properties-common
 
 # Add ROS2 apt repository
+sudo add-apt-repository universe
 echo "deb http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros2.list
 curl -k https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | apt-key add -
 
 # Install ROS packages
 check_packages ros-${TARGET_ROS_DISTRO}-${TARGET_ROS_PACKAGE} python3-vcstool python3-rosdep python3-argcomplete python3-colcon-common-extensions
-if [ "${TARGET_ROS_DISTRO}" != "rolling" ] ; then
+if [ "${TARGET_ROS_DISTRO}" != "rolling" && "${TARGET_ROS_DISTRO}" != "jazzy"  ] ; then
   check_packages python3-rosinstall
 fi
 
