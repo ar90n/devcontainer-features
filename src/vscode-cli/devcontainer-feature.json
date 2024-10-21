@@ -1,0 +1,10 @@
+{
+    "id": "vscode-cli",
+    "version": "1.0.0",
+    "name": "Visual Studio Code CLI",
+    "documentationURL": "",
+    "description": "Installs vscode-cli.",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
