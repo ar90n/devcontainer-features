@@ -1,0 +1,9 @@
+{
+    "install_specified_version": {
+        "image": "debian",
+        "features": {
+            "vscode-cli": {
+            }
+        }
+    }
+}
