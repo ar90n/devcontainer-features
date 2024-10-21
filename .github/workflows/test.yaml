@@ -21,6 +21,7 @@ jobs:
           - lbstanza
           - roc-lang
           - platformio
+          - vscode-cli
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -33,6 +34,8 @@ jobs:
           - features: ros2
             baseImage: debian:latest
           - features: ros2
+            baseImage: ubuntu:focal
+          - features: lbstanza
             baseImage: ubuntu:focal
 
     steps:
