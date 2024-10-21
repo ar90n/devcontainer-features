@@ -1,6 +1,6 @@
 {
     "id": "lbstanza",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "name": "lbstanza",
     "documentationURL": "",
     "description": "Installs lbstanza",
@@ -16,6 +16,7 @@
             ]
         }
     },
+    "postStartCommand": "cd /opt/lbstanza && stanza install -platform linux",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
     ]
