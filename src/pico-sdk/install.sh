@@ -185,11 +185,7 @@ do
     cd build
     cmake ../
     make -j$JNUM
-
-    if [[ "$REPO" == "picotool" ]]; then
-        echo "Installing picotool to /usr/local/bin/picotool"
-        cp picotool /usr/local/bin/
-    fi
+    make install
 done
 
 # OpenOCD
