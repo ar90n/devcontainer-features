@@ -1,0 +1,13 @@
+{
+    "id": "claude-code",
+    "version": "1.0.0",
+    "name": "Claude Code",
+    "documentationURL": "https://github.com/anthropics/claude-code",
+    "description": "Installs Claude Code, an agentic coding tool that helps you code faster.",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ],
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/node": {}
+    }
+}
