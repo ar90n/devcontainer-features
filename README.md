@@ -12,3 +12,6 @@
 * [platformio]("https://github.com/ar90n/devcontainer-features/tree/main/src/platformio")
 * [roc-lang]("https://github.com/ar90n/devcontainer-features/tree/main/src/roc-lang")
 * [lbstanza]("https://github.com/ar90n/devcontainer-features/tree/main/src/lbstanza")
+* [vscode-cli]("https://github.com/ar90n/devcontainer-features/tree/main/src/vscode-cli")
+* [claude-code]("https://github.com/ar90n/devcontainer-features/tree/main/src/claude-code")
+* [gemini-cli]("https://github.com/ar90n/devcontainer-features/tree/main/src/gemini-cli")
