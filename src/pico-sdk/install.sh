@@ -10,6 +10,7 @@ INSTALL_EXAMPLES=${INSTALLEXAMPLES}
 INSTALL_EXTRAS=${INSTALLEXTRAS}
 INSTALL_PLAYGROUND=${INSTALLPLAYGROUND}
 INSTALL_PICOPROBE=${INSTALLPICOPROBE}
+INSTALL_DEBUGROBE=${INSTALLDEBUGPROBE}
 INSTALL_PICOTOOL=${INSTALLPICOTOOL}
 INSTALL_OPENOCD=${INSTALLOPENOCD}
 
@@ -147,8 +148,8 @@ fi
 
 # Picoprobe and picotool
 TOOL_REPOS=""
-if [[ "$INSTALL_PICOPROBE" == "true" ]]; then
-    TOOL_REPOS="$TOOL_REPOS picoprobe"
+if [[ "$INSTALL_PICOPROBE" == "true" || "$INSTALL_DEBUGPROBE" == "true" ]]; then
+    TOOL_REPOS="$TOOL_REPOS debugprobe"
 fi
 if [[ "$INSTALL_PICOTOOL" == "true" ]]; then
     TOOL_REPOS="$TOOL_REPOS picotool"
@@ -160,7 +161,7 @@ do
     DEST="$OUTDIR/$REPO"
 
     SDK_BRANCH="master"
-    if [[ "$REPO" == "picoprobe" ]]; then
+    if [[ "$REPO" == "debugprobe" ]]; then
         case $TARGET_PICO_SDK_VERSION in
             1.*)
                 SDK_BRANCH=picoprobe-cmsis-v1.1
@@ -185,21 +186,24 @@ do
     cd build
     cmake ../
     make -j$JNUM
-    make install
+  
+    if [[ "$REPO" != "debugprobe" ]]; then
+      make install
+    fi
 done
 
 # OpenOCD
 if [[ "$INSTALL_OPENOCD" == "true" ]]; then
     cd $OUTDIR
-    # Should we include picoprobe support (which is a Pico acting as a debugger for another Pico)
-    OPENOCD_BRANCH="sdk-2.0"
+    # Should we include debug support (which is a Pico acting as a debugger for another Pico)
+    OPENOCD_BRANCH="rpi-common"
     case $TARGET_PICO_SDK_VERSION in
         1.*)
             OPENOCD_BRANCH="rp2040-v0.12.0"
             ;;
     esac
 
-    OPENOCD_CONFIGURE_ARGS="--enable-ftdi --enable-sysfsgpio --enable-bcm2835gpio --enable-picoprobe"
+    OPENOCD_CONFIGURE_ARGS="--enable-cmsis-dap --enable-ftdi --enable-bcm2835gpio"
     
     git clone "${GITHUB_PREFIX}openocd${GITHUB_SUFFIX}" -b $OPENOCD_BRANCH --depth=1
     cd openocd

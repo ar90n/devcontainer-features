@@ -3,11 +3,11 @@
         "image": "debian",
         "features": {
             "pico-sdk": {
-		  "version": "1.5.1",
+		  "version": "2.1.1",
 		  "installExamples": true,
 		  "installExtras": true,
                   "installPlayground": true,
-                  "installPicoprobe": true,
+                  "installDebugprobe": true,
                   "installPicotool": true,
                   "installOpenOCD": true
             }
