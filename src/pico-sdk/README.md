@@ -22,6 +22,7 @@ Installs pico-sdk.
 | installPicoprobe | Additionally install Picoprobe | boolean | false |
 | installPicotool | Additionally install Picotool | boolean | false |
 | installOpenOCD | Additionally install OpenOCD | boolean | false |
+| installDebugprobe | Additionally install Debugprobe | boolean | false |
 
 
 
