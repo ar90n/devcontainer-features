@@ -1,0 +1,9 @@
+{
+    "install_specified_version": {
+        "image": "debian:bullseye",
+        "features": {
+            "ghcr.io/devcontainers/features/node:1": {},
+            "gemini-cli": {}
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "id": "gemini-cli",
+    "version": "1.0.0",
+    "name": "Gemini CLI",
+    "documentationURL": "https://github.com/google/gemini-cli",
+    "description": "Installs Gemini CLI, a command-line interface for Google's Gemini AI.",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ],
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/node": {}
+    }
+}
