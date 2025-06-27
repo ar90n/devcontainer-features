@@ -74,7 +74,7 @@ GIT_DEPS="git ca-certificates"
 SDK_DEPS="cmake pkg-config gcc-arm-none-eabi gcc g++ libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib"
 PICOPROBE_DEPS="libusb-1.0-0-dev python3"
 PICOTOOL_DEPS="build-essential libusb-1.0-0-dev"
-OPENOCD_DEPS="gdb-multiarch automake autoconf build-essential texinfo libtool libftdi-dev libusb-1.0-0-dev"
+OPENOCD_DEPS="gdb-multiarch automake autoconf build-essential texinfo libtool libftdi-dev libusb-1.0-0-dev jimsh libjim-dev libhidapi-dev"
 
 DEPS="$GIT_DEPS $SDK_DEPS"
 if [[ "$INSTALL_PICOPROBE" == "true" ]]; then
