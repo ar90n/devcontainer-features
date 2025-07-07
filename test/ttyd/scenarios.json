@@ -1,0 +1,8 @@
+{
+    "install_specified_version": {
+        "image": "ubuntu:22.04",
+        "features": {
+            "ttyd": {}
+        }
+    }
+}
