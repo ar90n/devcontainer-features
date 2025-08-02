@@ -18,8 +18,15 @@
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/devcontainers/features/github-cli:1": {},
+        "ghcr.io/ar90n/devcontainer-features/claude-code:latest": {},
+        "ghcr.io/ar90n/devcontainer-features/gemini-cli:latest": {},
+        "ghcr.io/ar90n/devcontainer-features/ttyd:latest": {},
+        "ghcr.io/devcontainers-extra/features/devcontainers-cli:1": {}
     },
-    "remoteUser": "node",
-    "updateContentCommand": "npm install -g @devcontainers/cli"
+    "mounts": [
+    	"source=${localEnv:HOME}/.claude,target=/root/.claude,type=bind,consistency=cached"
+    ],
+    "remoteUser": "root"
 }
