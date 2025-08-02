@@ -1,0 +1,26 @@
+{
+    "id": "tinygo",
+    "version": "1.0.0",
+    "name": "TinyGo",
+    "documentationURL": "https://github.com/tinygo-org/tinygo",
+    "description": "Installs TinyGo, a Go compiler for small devices and WebAssembly.",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "0.38.0",
+                "0.37.0",
+                "0.36.0"
+            ],
+            "default": "latest",
+            "description": "Select or enter a TinyGo version to install"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ],
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/go": {}
+    }
+}
