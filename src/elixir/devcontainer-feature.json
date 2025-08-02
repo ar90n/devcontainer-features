@@ -1,0 +1,10 @@
+{
+    "id": "elixir",
+    "version": "1.0.0",
+    "name": "Elixir",
+    "documentationURL": "https://elixir-lang.org",
+    "description": "Installs Elixir programming language with Erlang/OTP.",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

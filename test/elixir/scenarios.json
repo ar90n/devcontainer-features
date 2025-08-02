@@ -1,0 +1,8 @@
+{
+    "basic_test": {
+        "image": "ubuntu:22.04",
+        "features": {
+            "elixir": {}
+        }
+    }
+}
