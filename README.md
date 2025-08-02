@@ -16,3 +16,4 @@
 * [claude-code]("https://github.com/ar90n/devcontainer-features/tree/main/src/claude-code")
 * [gemini-cli]("https://github.com/ar90n/devcontainer-features/tree/main/src/gemini-cli")
 * [ttyd]("https://github.com/ar90n/devcontainer-features/tree/main/src/ttyd")
+* [tinygo]("https://github.com/ar90n/devcontainer-features/tree/main/src/tinygo")
