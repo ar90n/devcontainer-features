@@ -26,7 +26,6 @@
         "ghcr.io/devcontainers-extra/features/devcontainers-cli:1": {}
     },
     "mounts": [
-    	"source=${localEnv:HOME}/.claude,target=/root/.claude,type=bind,consistency=cached"
-    ],
-    "remoteUser": "root"
+        "source=${localEnv:HOME}/.claude,target=/home/node/.claude,type=bind,consistency=cached"
+    ]
 }
