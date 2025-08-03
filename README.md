@@ -18,3 +18,4 @@
 * [ttyd]("https://github.com/ar90n/devcontainer-features/tree/main/src/ttyd")
 * [tinygo]("https://github.com/ar90n/devcontainer-features/tree/main/src/tinygo")
 * [elixir]("https://github.com/ar90n/devcontainer-features/tree/main/src/elixir")
+* [xpack-dev-tools]("https://github.com/ar90n/devcontainer-features/tree/main/src/xpack-dev-tools")

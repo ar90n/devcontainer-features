@@ -1,0 +1,29 @@
+{
+    "install_cmake_ninja": {
+        "image": "debian:bullseye",
+        "features": {
+            "xpack-dev-tools": {
+                "cmake": "latest",
+                "ninjaBuild": "latest"
+            }
+        }
+    },
+    "install_arm_gcc": {
+        "image": "ubuntu:22.04",
+        "features": {
+            "xpack-dev-tools": {
+                "armNoneEabiGcc": "latest"
+            }
+        }
+    },
+    "install_multiple_tools": {
+        "image": "debian:bullseye",
+        "features": {
+            "xpack-dev-tools": {
+                "cmake": "3.28.6-1",
+                "gcc": "latest",
+                "openocd": "0.12.0-4"
+            }
+        }
+    }
+}
