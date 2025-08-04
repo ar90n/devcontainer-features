@@ -40,7 +40,7 @@ check_packages curl lsb-release gnupg gnupg2 software-properties-common bc
 
 # Add KiCad apt repository
 . /etc/os-release
-if [ "${ID}" = "ubuntu" ] && (( $(echo "${VERSION_ID} < 24.04" | bc -l) )) ; then
+if [ "${ID}" = "ubuntu" ] ; then
     add-apt-repository --yes ppa:kicad/kicad-${TARGET_KICAD_VERSION}-releases
 fi
 
