@@ -15,7 +15,7 @@ Installs KiCad.
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | Select or enter a KiCad version to install | string | 7.0 |
+| version | Select or enter a KiCad version to install | string | 9.0 |
 
 
 
