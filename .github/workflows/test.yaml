@@ -37,6 +37,8 @@ jobs:
             baseImage: ubuntu:focal
           - features: lbstanza
             baseImage: ubuntu:focal
+          - features: kicad
+            baseImage: ubuntu:focal
 
     steps:
       - uses: actions/checkout@v3

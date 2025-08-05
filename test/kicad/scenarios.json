@@ -3,7 +3,7 @@
         "image": "ubuntu:jammy",
         "features": {
             "kicad": { 
-		    "version": "7.0"
+		    "version": "9.0"
             }
         }
     }
